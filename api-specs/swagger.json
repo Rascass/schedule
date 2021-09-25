@@ -1,0 +1,2959 @@
+{
+  "info": {
+    "title": "Application APIs",
+    "version": "1.0.0",
+    "description": "Application APIs"
+  },
+  "basePath": "/",
+  "swagger": "2.0",
+  "paths": {
+    "/audience": {
+      "get": {
+        "description": "get Audience",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Audience",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Audienceresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Audience",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Audience",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Audience": {
+                  "$ref": "#/definitions/Audience"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Audience",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Audienceresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/audience/{id}": {
+      "get": {
+        "description": "get Audience with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Audience ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Audience",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Audienceresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Audience not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Audience with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Audience ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Audience",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Audienceresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Audience not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Audience with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Audience ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Audience",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Audience": {
+                  "$ref": "#/definitions/Audience"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Audience",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Audienceresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Audience not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/course-name": {
+      "get": {
+        "description": "get CourseName",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get CourseName",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/CourseNameresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save CourseName",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "CourseName",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "CourseName": {
+                  "$ref": "#/definitions/CourseName"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save CourseName",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/CourseNameresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/course-name/{id}": {
+      "get": {
+        "description": "get CourseName with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "CourseName ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get CourseName",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/CourseNameresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "CourseName not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove CourseName with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "CourseName ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete CourseName",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/CourseNameresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "CourseName not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update CourseName with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "CourseName ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "CourseName",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "CourseName": {
+                  "$ref": "#/definitions/CourseName"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update CourseName",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/CourseNameresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "CourseName not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/course": {
+      "get": {
+        "description": "get Course",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Course",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Courseresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Course",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Course",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Course": {
+                  "$ref": "#/definitions/Course"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Course",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Courseresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/course/{id}": {
+      "get": {
+        "description": "get Course with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Course ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Course",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Courseresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Course not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Course with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Course ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Course",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Courseresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Course not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Course with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Course ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Course",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Course": {
+                  "$ref": "#/definitions/Course"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Course",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Courseresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Course not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/departament": {
+      "get": {
+        "description": "get Departament",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Departament",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Departamentresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Departament",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Departament",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Departament": {
+                  "$ref": "#/definitions/Departament"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Departament",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Departamentresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/departament/{id}": {
+      "get": {
+        "description": "get Departament with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Departament ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Departament",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Departamentresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Departament not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Departament with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Departament ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Departament",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Departamentresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Departament not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Departament with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Departament ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Departament",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Departament": {
+                  "$ref": "#/definitions/Departament"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Departament",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Departamentresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Departament not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/education-base": {
+      "get": {
+        "description": "get EducationBase",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get EducationBase",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/EducationBaseresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save EducationBase",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "EducationBase",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EducationBase": {
+                  "$ref": "#/definitions/EducationBase"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save EducationBase",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/EducationBaseresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/education-base/{id}": {
+      "get": {
+        "description": "get EducationBase with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "EducationBase ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get EducationBase",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/EducationBaseresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "EducationBase not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove EducationBase with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "EducationBase ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete EducationBase",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/EducationBaseresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "EducationBase not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update EducationBase with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "EducationBase ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "EducationBase",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "EducationBase": {
+                  "$ref": "#/definitions/EducationBase"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update EducationBase",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/EducationBaseresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "EducationBase not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/group": {
+      "get": {
+        "description": "get Group",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Group",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Groupresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Group",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Group",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Group": {
+                  "$ref": "#/definitions/Group"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Group",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Groupresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/group/{id}": {
+      "get": {
+        "description": "get Group with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Group ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Group",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Groupresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Group not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Group with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Group ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Group",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Groupresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Group not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Group with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Group ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Group",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Group": {
+                  "$ref": "#/definitions/Group"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Group",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Groupresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Group not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/lesson": {
+      "get": {
+        "description": "get Lesson",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Lesson",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Lessonresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Lesson",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Lesson",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Lesson": {
+                  "$ref": "#/definitions/Lesson"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Lesson",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Lessonresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/lesson/{id}": {
+      "get": {
+        "description": "get Lesson with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Lesson ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Lesson",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Lessonresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Lesson not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Lesson with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Lesson ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Lesson",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Lessonresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Lesson not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Lesson with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Lesson ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Lesson",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Lesson": {
+                  "$ref": "#/definitions/Lesson"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Lesson",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Lessonresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Lesson not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/person-info": {
+      "get": {
+        "description": "get PersonInfo",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get PersonInfo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/PersonInforesponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save PersonInfo",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "PersonInfo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "PersonInfo": {
+                  "$ref": "#/definitions/PersonInfo"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save PersonInfo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/PersonInforesponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/person-info/{id}": {
+      "get": {
+        "description": "get PersonInfo with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersonInfo ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get PersonInfo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/PersonInforesponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "PersonInfo not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove PersonInfo with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersonInfo ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete PersonInfo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/PersonInforesponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "PersonInfo not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update PersonInfo with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "PersonInfo ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "PersonInfo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "PersonInfo": {
+                  "$ref": "#/definitions/PersonInfo"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update PersonInfo",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/PersonInforesponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "PersonInfo not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/shift": {
+      "get": {
+        "description": "get Shift",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Shift",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Shiftresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Shift",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Shift",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Shift": {
+                  "$ref": "#/definitions/Shift"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Shift",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Shiftresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/shift/{id}": {
+      "get": {
+        "description": "get Shift with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Shift ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Shift",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Shiftresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Shift not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Shift with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Shift ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Shift",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Shiftresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Shift not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Shift with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Shift ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Shift",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Shift": {
+                  "$ref": "#/definitions/Shift"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Shift",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Shiftresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Shift not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/subject": {
+      "get": {
+        "description": "get Subject",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Subject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Subjectresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Subject",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Subject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Subject": {
+                  "$ref": "#/definitions/Subject"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Subject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Subjectresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/subject/{id}": {
+      "get": {
+        "description": "get Subject with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Subject ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Subject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Subjectresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Subject not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Subject with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Subject ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Subject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Subjectresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Subject not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Subject with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Subject ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Subject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Subject": {
+                  "$ref": "#/definitions/Subject"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Subject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Subjectresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Subject not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/teacher": {
+      "get": {
+        "description": "get Teacher",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get Teacher",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/Teacherresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save Teacher",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "Teacher",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Teacher": {
+                  "$ref": "#/definitions/Teacher"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save Teacher",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Teacherresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/teacher/{id}": {
+      "get": {
+        "description": "get Teacher with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Teacher ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get Teacher",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Teacherresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Teacher not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove Teacher with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Teacher ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete Teacher",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Teacherresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Teacher not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update Teacher with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Teacher ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "Teacher",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "Teacher": {
+                  "$ref": "#/definitions/Teacher"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update Teacher",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/Teacherresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Teacher not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/teachers-subject": {
+      "get": {
+        "description": "get TeachersSubject",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get TeachersSubject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/TeachersSubjectresponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save TeachersSubject",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "TeachersSubject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "TeachersSubject": {
+                  "$ref": "#/definitions/TeachersSubject"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save TeachersSubject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/TeachersSubjectresponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/teachers-subject/{id}": {
+      "get": {
+        "description": "get TeachersSubject with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "TeachersSubject ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get TeachersSubject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/TeachersSubjectresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "TeachersSubject not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove TeachersSubject with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "TeachersSubject ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete TeachersSubject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/TeachersSubjectresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "TeachersSubject not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update TeachersSubject with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "TeachersSubject ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "TeachersSubject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "TeachersSubject": {
+                  "$ref": "#/definitions/TeachersSubject"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update TeachersSubject",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/TeachersSubjectresponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "TeachersSubject not found",
+            "content": {}
+          }
+        }
+      }
+    },
+    "/working-type": {
+      "get": {
+        "description": "get WorkingType",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "get WorkingType",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/definitions/WorkingTyperesponse"
+                  }
+                },
+                "pageInfo": {
+                  "type": "object",
+                  "properties": {
+                    "pageSize": {
+                      "type": "integer"
+                    },
+                    "pageLimit": {
+                      "type": "integer"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "save WorkingType",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "in": "body",
+            "name": "WorkingType",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "WorkingType": {
+                  "$ref": "#/definitions/WorkingType"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "save WorkingType",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/WorkingTyperesponse"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/working-type/{id}": {
+      "get": {
+        "description": "get WorkingType with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "WorkingType ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "get WorkingType",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/WorkingTyperesponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "WorkingType not found",
+            "content": {}
+          }
+        }
+      },
+      "delete": {
+        "description": "remove WorkingType with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "WorkingType ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "delete WorkingType",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/WorkingTyperesponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "WorkingType not found",
+            "content": {}
+          }
+        }
+      },
+      "put": {
+        "description": "update WorkingType with id",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "WorkingType ID",
+            "required": true,
+            "type": "integer",
+            "format": "int64"
+          },
+          {
+            "in": "body",
+            "name": "WorkingType",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "WorkingType": {
+                  "$ref": "#/definitions/WorkingType"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "update WorkingType",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "data": {
+                  "type": "object",
+                  "$ref": "#/definitions/WorkingTyperesponse"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "WorkingType not found",
+            "content": {}
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Audience": {
+      "properties": {
+        "number": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Audienceresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "number": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "CourseName": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "letter": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "CourseNameresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "letter": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Course": {
+      "properties": {
+        "yearDuration": {
+          "type": "integer"
+        },
+        "courseNameId": {
+          "type": "integer"
+        },
+        "educationBaseId": {
+          "type": "integer"
+        },
+        "shiftId": {
+          "type": "integer"
+        },
+        "departamentId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Courseresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "yearDuration": {
+          "type": "integer"
+        },
+        "courseNameId": {
+          "type": "integer"
+        },
+        "educationBaseId": {
+          "type": "integer"
+        },
+        "shiftId": {
+          "type": "integer"
+        },
+        "departamentId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Departament": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Departamentresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "EducationBase": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "EducationBaseresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Group": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "courseId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Groupresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "courseId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Lesson": {
+      "properties": {
+        "number": {
+          "type": "integer"
+        },
+        "weekDay": {
+          "type": "integer"
+        },
+        "week": {
+          "type": "integer"
+        },
+        "subjectId": {
+          "type": "integer"
+        },
+        "teacherId": {
+          "type": "integer"
+        },
+        "audienceId": {
+          "type": "integer"
+        },
+        "groupId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Lessonresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "number": {
+          "type": "integer"
+        },
+        "weekDay": {
+          "type": "integer"
+        },
+        "week": {
+          "type": "integer"
+        },
+        "subjectId": {
+          "type": "integer"
+        },
+        "teacherId": {
+          "type": "integer"
+        },
+        "audienceId": {
+          "type": "integer"
+        },
+        "groupId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "PersonInfo": {
+      "properties": {
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "PersonInforesponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "firstName": {
+          "type": "string"
+        },
+        "lastName": {
+          "type": "string"
+        },
+        "middleName": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Shift": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Shiftresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Subject": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "totalHours": {
+          "type": "integer"
+        },
+        "courseId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Subjectresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "totalHours": {
+          "type": "integer"
+        },
+        "courseId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Teacher": {
+      "properties": {
+        "workingTypeId": {
+          "type": "integer"
+        },
+        "personInfoId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "Teacherresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "workingTypeId": {
+          "type": "integer"
+        },
+        "personInfoId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "TeachersSubject": {
+      "properties": {
+        "subjectId": {
+          "type": "integer"
+        },
+        "teacherId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "TeachersSubjectresponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "subjectId": {
+          "type": "integer"
+        },
+        "teacherId": {
+          "type": "integer"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "WorkingType": {
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    },
+    "WorkingTyperesponse": {
+      "properties": {
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "createdAt": {
+          "format": "date-time",
+          "type": "string"
+        },
+        "updatedAt": {
+          "format": "date-time",
+          "type": "string"
+        }
+      }
+    }
+  },
+  "responses": {},
+  "parameters": {},
+  "securityDefinitions": {},
+  "tags": []
+}
